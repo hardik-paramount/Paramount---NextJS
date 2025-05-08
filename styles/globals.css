@@ -1,0 +1,339 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 0rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  max-height: 40px;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-nav .menu-list {
+  font-weight: bold;
+  color: #000;
+}
+
+.menu-list .menu-item a{
+  color: #000;
+  text-decoration: none;
+}
+
+/* Search Bar */
+.search-bar {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.search-bar button {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+/* Hero Carousel */
+.hero-post {
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hero-post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hero-post .caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Post List */
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1rem;
+}
+
+.post-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  background: #0070f3;
+  color: white;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+
+/* Load More Button */
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.load-more button {
+  background: #0070f3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.load-more button:hover {
+  background: #005dc1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 640px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .post-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-post .caption {
+    font-size: 1.2rem;
+  }
+}
+
+/* Main Container */
+.post-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+/* Featured Image */
+.featured-image {
+  margin-bottom: 1.5rem;
+}
+.featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Title */
+.post-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Post Meta Info */
+.post-meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+.post-meta p {
+  margin: 0.2rem 0;
+}
+.post-meta a {
+  color: #0070f3;
+  text-decoration: none;
+}
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+/* Post Content */
+.post-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+}
+.post-content p {
+  margin-bottom: 1rem;
+}
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+.post-content h2, .post-content h3 {
+  margin: 1.5rem 0 1rem;
+}
+
+/* Social Share */
+.social-share {
+  margin-top: 2rem;
+}
+.social-share p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Navigation */
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+}
+.previous-post a,
+.next-post a {
+  color: #0070f3;
+  text-decoration: none;
+}
+.previous-post a:hover,
+.next-post a:hover {
+  text-decoration: underline;
+}
+
+/* Not Found */
+.post-not-found {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  color: #999;
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+  .post-title {
+    font-size: 2.2rem;
+  }
+  .post-content {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post-container {
+    padding: 2rem;
+  }
+  .post-title {
+    font-size: 2.5rem;
+  }
+  .post-content {
+    font-size: 1.1rem;
+  }
+}
+
+  
+  .swiper-pagination-bullet{
+    background: #fff !important;
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+    color: #eee;
+  }
+
+  body {
+    font-family: sans-serif;
+  }
+
+  .topbar {
+    background: #1a1a1a !important;
+    color: #fff;
+    font-size: 0.875rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center !important;
+  }
